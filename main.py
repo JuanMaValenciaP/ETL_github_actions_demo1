@@ -15,7 +15,7 @@ def save_data(df, filename="data", format='.csv'):
 
 def main():
     data = download_data()
-    save_data(data, 'data_from_api.csv')
+    # save_data(data, 'data_from_api.csv')
 
 if __name__ == "__main__":
     main()
