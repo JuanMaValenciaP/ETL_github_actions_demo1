@@ -31,4 +31,9 @@ jobs:
         git config --global user.email 'valenciajuan88@gmail.com'
         git add -A
         git commit -m "Actualizar datos" || exit 0   # El comando falla si no hay cambios
-        git push https://${{secrets.TOKEN_ACTIONS_EX1}}@github.com/JuanMaValenciaP/ETL_github_actions_ex1.git HEAD:main
+
+    - name: Push cambios
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.TOKEN_ACTIONS_EX1 }}
+        branch: main
