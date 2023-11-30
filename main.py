@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import datetime as dt
 
 def download_data():
     url = "https://jsonplaceholder.typicode.com/posts"
@@ -8,7 +9,8 @@ def download_data():
     df = pd.DataFrame(data)
     return df
 
-def save_data(df, filename="data.csv"):
+def save_data(df, filename="data", format='.csv'):
+    saving_date = dt.datetime.now().strftime('%Y%m%d-%H%M%S')
     df.to_csv(filename, index=False)
 
 def main():
