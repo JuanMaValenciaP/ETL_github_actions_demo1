@@ -1,5 +1,4 @@
 import requests
-import csv
 import pandas as pd
 
 def download_data():
