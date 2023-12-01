@@ -2,7 +2,7 @@ name: data pipeline
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  
+    - cron: '2 2 * * *'  
 
 jobs:
   build:
