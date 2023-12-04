@@ -17,3 +17,16 @@ jobs:
 
     - name: Run script
       run: python script_ex1.py
+
+    - name: Create a text file
+      run: echo "new txt file" > output.txt
+
+    - name: Commit text file
+      run: |
+        git config --global user.name 'JuanMa Valencia'
+        git config --global user.email 'valenciajuan88@gmail.com'
+        git add output.txt
+        git commit -m 'save txt file'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
