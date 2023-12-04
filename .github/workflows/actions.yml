@@ -19,7 +19,7 @@ jobs:
       run: python script_ex1.py
 
     - name: Create a text file
-      run: echo "new txt file" > output.txt
+      run: echo "linea nueva new txt file" > output.txt
 
     - name: Commit text file
       run: |
